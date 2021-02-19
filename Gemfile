@@ -12,7 +12,6 @@ gem 'bootstrap_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4'
 # Use Puma as the app server
-gem 'sqlite3'
 gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -30,6 +29,7 @@ gem 'jbuilder'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 3.0'
 gem 'will_paginate', '~> 3.1.0'
+gem 'pg' , '~> 0.21'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -42,6 +42,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
   gem 'selenium-webdriver'
+end
+group :production do
+  gem 'rails_12factor'
 end
 
 group :development do
