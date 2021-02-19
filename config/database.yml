@@ -13,7 +13,7 @@ development:
 
 test:
   <<: *default
-  host: <%= ENV['POSTGRES_HOST'] ||= db %>
+  host: <%= ENV['POSTGRES_HOST'] ||= 'db' %>
   username: <%= ENV['POSTGRES_USER'] ||= 'postgres' %>
   password: <%= ENV['POSTGRES_PASSWORD'] ||= '' %>
   database: bleater-test
